@@ -12711,38 +12711,38 @@ Default GPU Device: /gpu:0
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Epoch   0 Batch    0/33   train_loss = 8.824
-Epoch   3 Batch   29/33   train_loss = 5.222
-Epoch   7 Batch   25/33   train_loss = 4.596
-Epoch  11 Batch   21/33   train_loss = 4.259
-Epoch  15 Batch   17/33   train_loss = 3.846
-Epoch  19 Batch   13/33   train_loss = 3.554
-Epoch  23 Batch    9/33   train_loss = 3.212
-Epoch  27 Batch    5/33   train_loss = 2.929
-Epoch  31 Batch    1/33   train_loss = 2.584
-Epoch  34 Batch   30/33   train_loss = 2.514
-Epoch  38 Batch   26/33   train_loss = 2.248
-Epoch  42 Batch   22/33   train_loss = 2.033
-Epoch  46 Batch   18/33   train_loss = 1.882
-Epoch  50 Batch   14/33   train_loss = 1.660
-Epoch  54 Batch   10/33   train_loss = 1.531
-Epoch  58 Batch    6/33   train_loss = 1.396
-Epoch  62 Batch    2/33   train_loss = 1.305
-Epoch  65 Batch   31/33   train_loss = 1.162
+Epoch   3 Batch   29/33   train_loss = 5.260
+Epoch   7 Batch   25/33   train_loss = 4.617
+Epoch  11 Batch   21/33   train_loss = 4.265
+Epoch  15 Batch   17/33   train_loss = 3.845
+Epoch  19 Batch   13/33   train_loss = 3.539
+Epoch  23 Batch    9/33   train_loss = 3.205
+Epoch  27 Batch    5/33   train_loss = 2.930
+Epoch  31 Batch    1/33   train_loss = 2.568
+Epoch  34 Batch   30/33   train_loss = 2.501
+Epoch  38 Batch   26/33   train_loss = 2.247
+Epoch  42 Batch   22/33   train_loss = 2.011
+Epoch  46 Batch   18/33   train_loss = 1.808
+Epoch  50 Batch   14/33   train_loss = 1.627
+Epoch  54 Batch   10/33   train_loss = 1.528
+Epoch  58 Batch    6/33   train_loss = 1.395
+Epoch  62 Batch    2/33   train_loss = 1.312
+Epoch  65 Batch   31/33   train_loss = 1.189
 Epoch  69 Batch   27/33   train_loss = 1.090
-Epoch  73 Batch   23/33   train_loss = 0.936
-Epoch  77 Batch   19/33   train_loss = 0.844
-Epoch  81 Batch   15/33   train_loss = 0.785
-Epoch  85 Batch   11/33   train_loss = 0.790
-Epoch  89 Batch    7/33   train_loss = 0.669
-Epoch  93 Batch    3/33   train_loss = 0.600
-Epoch  96 Batch   32/33   train_loss = 0.507
-Epoch 100 Batch   28/33   train_loss = 0.443
-Epoch 104 Batch   24/33   train_loss = 0.471
-Epoch 108 Batch   20/33   train_loss = 0.385
+Epoch  73 Batch   23/33   train_loss = 0.942
+Epoch  77 Batch   19/33   train_loss = 0.826
+Epoch  81 Batch   15/33   train_loss = 0.747
+Epoch  85 Batch   11/33   train_loss = 0.712
+Epoch  89 Batch    7/33   train_loss = 0.643
+Epoch  93 Batch    3/33   train_loss = 0.575
+Epoch  96 Batch   32/33   train_loss = 0.487
+Epoch 100 Batch   28/33   train_loss = 0.428
+Epoch 104 Batch   24/33   train_loss = 0.470
+Epoch 108 Batch   20/33   train_loss = 0.371
 Epoch 112 Batch   16/33   train_loss = 0.394
-Epoch 116 Batch   12/33   train_loss = 0.363
-Epoch 120 Batch    8/33   train_loss = 0.325
-Epoch 124 Batch    4/33   train_loss = 0.307
+Epoch 116 Batch   12/33   train_loss = 0.355
+Epoch 120 Batch    8/33   train_loss = 0.315
+Epoch 124 Batch    4/33   train_loss = 0.295
 Model Trained and Saved
 </pre>
 </div>
@@ -12826,7 +12826,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_tensors</span><span class="p">(</span><span class="n">loaded_graph</span><span class="p">):</span>
@@ -12882,7 +12882,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">pick_word</span><span class="p">(</span><span class="n">probabilities</span><span class="p">,</span> <span class="n">int_to_vocab</span><span class="p">):</span>
@@ -12893,8 +12893,10 @@ Model Trained and Saved
 <span class="sd">    :return: String of the predicted word</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># TODO: Implement Function</span>
-    <span class="k">return</span> <span class="n">int_to_vocab</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">probabilities</span><span class="p">)]</span>
-
+    <span class="n">random_nums</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">probabilities</span><span class="p">),</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">high</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">prob_noise</span> <span class="o">=</span> <span class="n">probabilities</span><span class="o">*</span><span class="n">random_nums</span>
+    <span class="n">prob_noise</span> <span class="o">=</span> <span class="n">prob_noise</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">prob_noise</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">int_to_vocab</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">prob_noise</span><span class="p">)]</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">DON&#39;T MODIFY ANYTHING IN THIS CELL THAT IS BELOW THIS LINE</span>
@@ -12936,7 +12938,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gen_length</span> <span class="o">=</span> <span class="mi">200</span>
@@ -13000,18 +13002,24 @@ Model Trained and Saved
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>INFO:tensorflow:Restoring parameters from ./save
-moe_szyslak:(shocked) that&#39;s how it works? i was just drawin&#39; wangs on the numbers.
-lenny_leonard:(looks at watch) ooh, this place!
-homer_simpson:(happy) so good to me.
-moe_szyslak: yeah, let me guess how much of my blood and sweat are in this drink, or my bedroom it was really onto.
-moe_szyslak: oh, hey, get that outta here. i just adopted a capuchin monkey and i can beat up my famous poulet au vin avec champignons à la improv comic) but my last chance for a while we need some more of a pig.
-moe_szyslak: oh, god, no.
-homer_simpson: oh, no, i won&#39;t hear of here.
-moe_szyslak: yeah, well, i guess.
-carl_carlson: to show you a little tipsy.
-barney_gumble:(a little tipsy) yesterday&#39;s, you can be too late to save my dad, and it&#39;s signed by you.
-moe_szyslak: okay, homer, he&#39;s tired! he&#39;s tired! now&#39;s your chance! let me buy!
-homer_simpson:
+moe_szyslak:(shocked) that&#39;s how it works? i was just drawin&#39; wangs on the numbers are all bumpy-like.
+
+
+lenny_leonard: get his keys!
+homer_simpson:(taunting) hello. you&#39;re always moe.
+homer_simpson:(sighs) this is why i don&#39;t talk much bigger than that might make you look good on the other night you saw this?
+carl_carlson: hey, it&#39;s one of your hare-brained schemes for all the japanese girlfriend pillows in boxing!
+homer_simpson:(laughs) it&#39;s funny and my favorite meal, the service on the house.
+moe_szyslak: that comes and learn, homer!
+
+
+moe_szyslak:(snide) well, that&#39;s it. i say, if it feels good, do it?
+moe_szyslak:(big knowing laugh) / i&#39;m not going to see ya soon.
+homer_simpson:(confident) i&#39;ll see your fifty cents and make you guys so much safer than that?
+moe_szyslak: sure.
+attractive_woman_#1: excuse me, i&#39;m going to.
+carl_carlson: aw, marriage is gonna come for me?
+lenny_leonard: i just
 </pre>
 </div>
 </div>
